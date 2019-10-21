@@ -5,6 +5,7 @@ const data = [
       'Chi arriva ora? Un gufo. "Siete pronte? Cominciamo! 3, 2, 1 ... Via"!'
     ],
     youtube: ["z5neFa-QRpg"],
+    images: ["19.png"],
     glosses: [
       "gls('19',[],[],[wh,'y/n',foc],[],[],['venire chi . gufo . voi-due pronto . cominciare . 3,2,1 . via'],[],[g])."
     ],
@@ -55,6 +56,7 @@ const data = [
       "E anche la tartaruga si incammina."
     ],
     youtube: ["tv2JR1uMCTg", "yqiORaFRJDA"],
+    images: ["20.1.png", "20.2.png"],
     glosses: [
       "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
       "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
