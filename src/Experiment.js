@@ -44,10 +44,10 @@ class MyCarousel extends React.Component {
   }
 }
 
-class Example extends React.Component {
+class Experiment extends React.Component {
   render() {
     return <MyCarousel />;
   }
 }
 
-export default Example;
+export default Experiment;

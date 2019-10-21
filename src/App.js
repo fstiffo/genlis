@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./Home";
-import Example from "./Example";
+import Experiment from "./Experiment";
 
 import "./App.css";
 
@@ -19,8 +19,8 @@ const App = () => (
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/example" eventKey="example">
-            Example
+          <Nav.Link href="/experiment" eventKey="experiment">
+            Experiment
           </Nav.Link>
         </Nav.Item>
       </Nav>
@@ -29,8 +29,8 @@ const App = () => (
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/example">
-            <Example />
+          <Route path="/experiment">
+            <Experiment />
           </Route>
         </Switch>
       </Container>
