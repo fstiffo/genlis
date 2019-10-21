@@ -26,7 +26,14 @@ class GlossRow extends React.Component {
         gloss={this.props.glosses[key]}
       />
     ));
-    return <Row>{cols}</Row>;
+    return (
+      <>
+        <Row>
+          <h5>Glosses</h5>
+        </Row>
+        <Row>{cols}</Row>
+      </>
+    );
   }
 }
 
