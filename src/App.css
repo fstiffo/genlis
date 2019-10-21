@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+}
+
+.toast {
+  margin: 0 auto;
+}
+
+.carousel {
+  background-color: cadetblue;
+  height: 30rem;
+  width: 100%;
+  padding: 3rem;
+}
