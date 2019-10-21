@@ -1,15 +1,17 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
-import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
+import VideoRow from "./VideoRow";
+import data from "./data";
 
-class MyCarousel extends React.Component {
+class DiscourseUnit extends React.Component {
   render() {
+    console.log(typeof this.props.id);
+    let id = this.props.id;
+    let du = data.find(e => e.id === id);
     return (
       <>
-        <h3>{this.props.id}</h3>
+        <h3>Discourse Unit {id}</h3>
+        <VideoRow texts={du.texts} youtube={du.youtube} />
       </>
     );
   }
@@ -17,8 +19,8 @@ class MyCarousel extends React.Component {
 
 const Experiment = () => {
   let { id } = useParams();
-  console.log(id);
-  return <MyCarousel id={id} />;
+  let safeId = typeof id === "undefined" ? "20" : id;
+  return <DiscourseUnit id={safeId} />;
 };
 
 export default Experiment;
