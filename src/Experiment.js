@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import VideoRow from "./VideoRow";
 import GlossRow from "./GlossRow";
 import SemanticRow from "./SemanticRow";
+import LogicalRow from "./LogicalRow";
 import data from "./data";
 
 class ChevronDown extends React.Component {
@@ -34,6 +35,7 @@ class DiscourseUnit extends React.Component {
         <ChevronDown />
         <SemanticRow syntax_lexicon={du.syntax_lexicon} />
         <ChevronDown />
+        <LogicalRow semantic_morphology={du.semantics_morphology} />
       </>
     );
   }
