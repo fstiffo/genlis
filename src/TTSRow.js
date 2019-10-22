@@ -11,6 +11,7 @@ class TTSCol extends React.Component {
         <ReactPlayer
           url={"/snds/" + this.props.tts}
           controls
+          volume={0.5}
           width={"100%"}
           height={"25px"}
         />
