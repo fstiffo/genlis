@@ -9,7 +9,7 @@ class TTSCol extends React.Component {
       <Col>
         <p>{this.props.generated_text}</p>
         <ReactPlayer
-          url={"snds/" + this.props.tts}
+          url={"/snds/" + this.props.tts}
           controls
           width={"100%"}
           height={"25px"}
