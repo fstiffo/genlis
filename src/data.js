@@ -11,41 +11,45 @@ const data = [
     ],
     syntax_lexicon: [
       {
-        id: [19, 1, 28],
+        ref: [19, 1, 28],
         prolog:
           "seml(19,1,28-42,coord(e,[prst,pres,ind,arrivare,[gufo,avv-[ora]]],[dirs,pres,ind,dire,[little_pro,qcomp-[essere,stativo,question,[voi-[due],xcomp-[pronto]]]]]))"
       },
       {
-        id: [19, 2, 29],
+        ref: [19, 2, 29],
         prolog:
           "seml(19,2,29-44,ipotas([perloc,pres,imperat,cominciare,[little_pro-[plur]]],[dirs,pres,ind,dire,[little_pro,interj-[3 2 1 ... via]]]))"
       }
     ],
     semantics_morphology: [
       {
-        id: [19, 1],
+        ref: [19, 1],
         prolog:
           "seml(19,1,28-42,coord(e,[prst,pres,ind,arrivare,[[ndef,_,_,gufo],adj(ora)]],[dirs,pres,ind,dire,[[top,_,_,pro],[quest,pres,ind,essere,[[top,due,plur,voi],[pred,pronto]]]]]))"
       },
       {
-        id: [19, 2],
+        ref: [19, 2],
         prolog:
           "seml(19,2,29-44,ipotas([perloc,pres,imperat,cominciare,[[top,_,plur,pro]]],[dirs,pres,ind,dire,[[top,_,_,pro],[interj,[3 2 1 ... via]]]]))"
       }
     ],
     discourse_anaph: [
-      "turn(gufo,prst,arrivare,19,1,28-42)",
-      "turn(pro,dirs,dire,19,1,28-42)",
-      "turn(pro,perloc,cominciare,19,2,29-44)",
-      "turn(pro,dirs,dire,19,2,29-44)",
-      "turn(gufo, dirs, dire, 19, 2, 29-44)",
-      "turn(gufo, perloc, cominciare, 19, 2, 29-44)",
-      "turn(gufo, dirs, dire, 19, 1, 28-42)",
-      "turn(gufo, prst, arrivare, 19, 1, 28-42)"
+      [
+        "turn(gufo,prst,arrivare,19,1,28-42)",
+        "turn(pro,dirs,dire,19,1,28-42)",
+        "turn(pro,perloc,cominciare,19,2,29-44)",
+        "turn(pro,dirs,dire,19,2,29-44)"
+      ],
+      [
+        "turn(gufo, dirs, dire, 19, 2, 29-44)",
+        "turn(gufo, perloc, cominciare, 19, 2, 29-44)",
+        "turn(gufo, dirs, dire, 19, 1, 28-42)",
+        "turn(gufo, prst, arrivare, 19, 1, 28-42)"
+      ]
     ],
     generated_text: [
-      "ora arriva un gufo e dice : voi due siete pronti",
-      'cominciamo dice: " 3 2 1 ... via'
+      "ora , arriva un gufo e dice : voi due siete pronti ? [[slnc 600]]",
+      '[[pbas 20.800; volm +5.0]] cominciamo [[volm -5.0]] dice : " 3 [[slnc 200]] 2 [[slnc 200]] 1 [[slnc 400]] [[pbas 20.800; volm +5.0]] via [[volm -5.0; slnc 200]] ! [[slnc 600]] '
     ],
     tts: ["19.mp3"]
   },
@@ -86,16 +90,20 @@ const data = [
       }
     ],
     discourse_anaph: [
-      "turn(lepre,act,superare,20,1,30-46)",
-      "turn(pro,act,andarsene,20,1,30-46)",
-      "turn(tartaruga,act,incamminarsi,20,2,31-48)",
-      "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
-      "turn(lepre, act, andarsene, 20, 1, 30-46)",
-      "turn(lepre, act, superare, 20, 1, 30-46)"
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
     ],
     generated_text: [
-      "la lepre superò la tartaruga velocemente e se ne andò",
-      "e anche la tartaruga si incamminò"
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
     ],
     tts: ["20.1.mp3", "20.2.mp3"]
   }

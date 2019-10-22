@@ -8,7 +8,7 @@ class GlossCol extends React.Component {
     return (
       <Col>
         <Figure>
-          <Figure.Image src={"imgs/" + this.props.image} />
+          <Figure.Image src={"imgs/" + this.props.image} fluid />
           <Figure.Caption>{this.props.gloss}</Figure.Caption>
         </Figure>
       </Col>
