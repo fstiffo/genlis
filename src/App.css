@@ -6,9 +6,37 @@
   margin: 0 auto;
 }
 
-.carousel {
-  background-color: cadetblue;
-  height: 30rem;
-  width: 100%;
-  padding: 3rem;
+.gloss {
+  border-left-color: #ffe240;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding-left: 5px;
+}
+
+.semantic {
+  border-left-color: #92ff3f;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding-left: 5px;
+}
+
+.logical {
+  border-left-color: #ff4d2d;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding-left: 5px;
+}
+
+.generation {
+  border-left-color: #4a9bff;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding-left: 5px;
+}
+
+.tts {
+  border-left-color: #8f3fff;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding-left: 5px;
 }

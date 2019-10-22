@@ -28,10 +28,10 @@ class LogicRow extends React.Component {
     ));
     return (
       <>
-        <Row>
+        <Row className="logical">
           <h5>Enriched Logical Formulas</h5>
         </Row>
-        <Row>{cols}</Row>
+        <Row className="logical">{cols}</Row>
       </>
     );
   }

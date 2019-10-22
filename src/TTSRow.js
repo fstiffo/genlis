@@ -2,7 +2,6 @@ import React from "react";
 import ReactPlayer from "react-player";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Figure from "react-bootstrap/Figure";
 
 class TTSCol extends React.Component {
   render() {
@@ -32,10 +31,10 @@ class TTSRow extends React.Component {
     ));
     return (
       <>
-        <Row>
+        <Row className="tts">
           <h5>Prosodics Markers Association & TTS</h5>
         </Row>
-        <Row>{cols}</Row>
+        <Row className="tts">{cols}</Row>
       </>
     );
   }

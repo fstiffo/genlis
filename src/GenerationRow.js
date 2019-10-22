@@ -17,10 +17,10 @@ class GenerationRow extends React.Component {
   render() {
     return (
       <>
-        <Row>
+        <Row className="generation">
           <h5>General Generation</h5>
         </Row>
-        <Row>
+        <Row className="generation">
           <GenerationCol turns={this.props.discourse_anaph[0]} />
           <Col
             sm={1}

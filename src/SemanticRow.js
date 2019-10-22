@@ -28,10 +28,10 @@ class SemanticRow extends React.Component {
     ));
     return (
       <>
-        <Row>
+        <Row className="semantic">
           <h5>Semantic Formulas</h5>
         </Row>
-        <Row>{cols}</Row>
+        <Row className="semantic">{cols}</Row>
       </>
     );
   }

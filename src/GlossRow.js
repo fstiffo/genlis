@@ -28,10 +28,10 @@ class GlossRow extends React.Component {
     ));
     return (
       <>
-        <Row>
+        <Row className="gloss">
           <h5>Glosses</h5>
         </Row>
-        <Row>{cols}</Row>
+        <Row className="gloss">{cols}</Row>
       </>
     );
   }
