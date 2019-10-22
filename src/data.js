@@ -48,8 +48,7 @@ const data = [
       ]
     ],
     generated_text: [
-      "ora , arriva un gufo e dice : voi due siete pronti ? [[slnc 600]]",
-      '[[pbas 20.800; volm +5.0]] cominciamo [[volm -5.0]] dice : " 3 [[slnc 200]] 2 [[slnc 200]] 1 [[slnc 400]] [[pbas 20.800; volm +5.0]] via [[volm -5.0; slnc 200]] ! [[slnc 600]] '
+      'ora , arriva un gufo e dice : voi due siete pronti ? [[slnc 600]] [[pbas 20.800; volm +5.0]] cominciamo [[volm -5.0]] dice : " 3 [[slnc 200]] 2 [[slnc 200]] 1 [[slnc 400]] [[pbas 20.800; volm +5.0]] via [[volm -5.0; slnc 200]] ! [[slnc 600]] '
     ],
     tts: ["19.mp3"]
   },

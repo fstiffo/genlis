@@ -7,6 +7,7 @@ import GlossRow from "./GlossRow";
 import SemanticRow from "./SemanticRow";
 import LogicalRow from "./LogicalRow";
 import GenerationRow from "./GenerationRow";
+import TTSRow from "./TTSRow";
 
 import data from "./data";
 
@@ -41,6 +42,7 @@ class DiscourseUnit extends React.Component {
         <ChevronDown />
         <GenerationRow discourse_anaph={du.discourse_anaph} />
         <ChevronDown />
+        <TTSRow generated_text={du.generated_text} tts={du.tts} />
       </>
     );
   }
