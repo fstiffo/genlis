@@ -6,6 +6,8 @@ import VideoRow from "./VideoRow";
 import GlossRow from "./GlossRow";
 import SemanticRow from "./SemanticRow";
 import LogicalRow from "./LogicalRow";
+import GenerationRow from "./GenerationRow";
+
 import data from "./data";
 
 class ChevronDown extends React.Component {
@@ -36,6 +38,9 @@ class DiscourseUnit extends React.Component {
         <SemanticRow syntax_lexicon={du.syntax_lexicon} />
         <ChevronDown />
         <LogicalRow semantic_morphology={du.semantics_morphology} />
+        <ChevronDown />
+        <GenerationRow discourse_anaph={du.discourse_anaph} />
+        <ChevronDown />
       </>
     );
   }
