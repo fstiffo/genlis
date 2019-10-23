@@ -17,9 +17,10 @@ class DiscourseUnitNav extends React.Component {
   render() {
     console.log(this.props.du_id);
     let prevId = this.props.du_id === "19" ? 19 : this.props.du_id * 1 - 1;
-    let prevDisable = prevId === 19;
+    let prevDisable = this.props.du_id === "19";
     let nextId = this.props.du_id === "30" ? 30 : this.props.du_id * 1 + 1;
-    let nextDisable = nextId === 30;
+    console.log(nextId);
+    let nextDisable = this.props.du_id === "30";
     return (
       <Navbar bg="light" variant="light" fixed="top" className="du-nav">
         <Navbar.Brand href="/experiment/19">Experiment</Navbar.Brand>
@@ -54,7 +55,6 @@ class DiscourseUnit extends React.Component {
   render() {
     let id = this.props.id;
     let du = data.find(e => e.id === id);
-    console.log(du);
     return (
       <div className="du">
         <h3>Discourse Unit {id}</h3>
