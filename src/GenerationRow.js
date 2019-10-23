@@ -27,8 +27,8 @@ class GenerationRow extends React.Component {
             xs={1}
             className={"d-flex align-items-center justify-content-center "}
           >
-            <h4 class="text-center">
-              <i class="fa fa-chevron-right" />
+            <h4 className="text-center">
+              <i className="fa fa-arrow-right" />
             </h4>
           </Col>
           <GenerationCol key={3} turns={this.props.discourse_anaph[1]} />
