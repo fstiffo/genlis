@@ -18,7 +18,9 @@ class GenerationRow extends React.Component {
     return (
       <>
         <Row className="generation">
-          <h5>General Generation</h5>
+          <h5>
+            Reference Resolution in Propositional Structure of Dialogue Turns
+          </h5>
         </Row>
         <Row className="generation">
           <GenerationCol turns={this.props.discourse_anaph[0]} />
