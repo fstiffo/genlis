@@ -1,5 +1,843 @@
 const data = [
   {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('1.1',[],[],[wh],[loc1_nprox,loc1_nprox],[],['bosco , ix-loc1_nprox vivere chi . lepre , lepre altezzoso'],	[],[])",
+      "gls('1.2',[altezzoso],[],[],[loc2_nprox,loc2_nprox,loc2_nprox],[],['saltare_l , cominciare occhi_cl_veloce_vs_loc2_nprox , vedere ix-loc2_nprox camminare_t , tartaruga tranquillo camminare_t-lentamente'],[l,t,t,t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [1, 1, 1],
+        prolog:
+          "seml(1,1,1-1,[prst,imp,ind,vivere,[lepre,lepre-[ (mod)-[altezzoso]],obl-[luogo,bosco]]])"
+      },
+      {
+        ref: [1, 2, 2],
+        prolog:
+          "seml(1,2,2-2,coord(mentre,[act,imp,ind,saltare,[little_pro]],[act,pass_rem,ind,vedere,[little_pro,avv-[improvvisamente],[tartaruga-[ (mod)-tranquillo],fcomp-[camminare,attivita,statement,[little_pro,avv-[lentamente]]]]]]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [1, 1],
+        prolog:
+          "seml(1,1,1-1,[prst,imp,ind,vivere,[[ndef,_,_,lepre],[def,_,_,lepre,[prop,altezzoso]],[ndef,_,_,bosco,luogo]]])"
+      },
+      {
+        ref: [1, 2],
+        prolog:
+          "seml(1,2,2-2,coord(mentre,[act,imp,ind,saltare,[[top,_,_,pro]]],[act,pass_rem,ind,vedere,[[top,_,_,pro],adj(improvvisamente),[ndef,_,_,tartaruga-[ (mod)-tranquillo],[act,imp,ind,camminare,[[top,_,_,pro],adj(lentamente)]]]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,prst,vivere,1,1,1-1)",
+        "turn(pro,act,saltare,1,2,2-2)",
+        "turn(pro,act,vedere,1,2,2-2)"
+      ],
+      [
+        "turn(lepre, act, vedere, 1, 2, 2-2)",
+        "turn(lepre, act, saltare, 1, 2, 2-2)",
+        "turn(lepre, prst, vivere, 1, 1, 1-1)"
+      ]
+    ],
+    generated_text: [
+      "nel bosco , viveva una lepre la lepre altezzosa [[slnc 600]]",
+      "mentre saltellava vide improvvisamente una tranquilla tartaruga che camminava lentamente [[slnc 900]]"
+    ],
+    tts: ["1.1.mp3", "1.2.mp3"]
+  },
+  {
+    id: "2",
+    texts: [
+      'La lepre le si avvicinò saltellando e le chiese con tono sprezzante: "Noi due possiamo fare una gara?'
+    ],
+    youtube: ["35UZ13sUWHA"],
+    images: ["2.png"],
+    glosses: [
+      "gls('2',[altezzoso],[],[],[loc2_nprox,loc2_nprox,loc2_nprox],[guardare],['lepre , saltare_l vicino ix-3t . cominciare chiedere : noi-2 gara può'],[l,l],[l])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [2, 1, 3],
+        prolog:
+          "seml(2,1,3-4,coord(e,[act,pres,ind,avvicinarsi,[lepre,avv-[saltare]]],[dirs,pres,ind,chiedere,[little_pro,obl-[con,tono-[ (mod)-[sprezzante]]],qcomp-[potere,modal,question,[noi-2,vcomp-[fare,accompl,[gara]]]]]]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [2, 1],
+        prolog:
+          "seml(2,1,3-4,coord(e,[act,pres,ind,avvicinarsi,[[def,_,_,lepre],adj(saltare)]],[dirs,pres,ind,chiedere,[[top,_,_,pro],[ndef,_,_,tono-[prop,sprezzante],con],[quest,pres,ind,potere,[[top,2,plur,noi],[fare,accompl,[[ndef,_,_,gara]]]]]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,avvicinarsi,2,1,3-4)",
+        "turn(pro,dirs,chiedere,2,1,3-4)"
+      ],
+      [
+        "turn(lepre, dirs, chiedere, 2, 1, 3-4)",
+        "turn(lepre, act, avvicinarsi, 2, 1, 3-4)"
+      ]
+    ],
+    generated_text: [
+      "la lepre si avvicina saltellando e chiede con un tono sprezzante : noi 2 possiamo fare una gara ? [[slnc 600]]"
+    ],
+    tts: ["2.mp3"]
+  },
+  {
+    id: "3",
+    texts: ['La tartaruga perplessa domandò: "Che gara"?'],
+    youtube: ["MRoJycpHuTk"],
+    images: ["3.png"],
+    glosses: [
+      "gls('3',[perplesso],[],[wh],[loc7_prox],[guardare],['tartaruga : gara cosa'], [t],[t])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [3, 1, 4],
+        prolog:
+          "seml(3,1,4-6,[dirs,pres,ind,guardare,[tartaruga,avv-[perplesso],qcomp-[essere,stativo,question,[gara-[cosa]]]]])"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [3, 1],
+        prolog:
+          "seml(3,1,4-6,[dirs,pres,ind,guardare,[[def,_,_,tartaruga],adj(perplesso),[quest,pres,ind,essere,[[def0,quale,sing,gara]]]]])"
+      }
+    ],
+    discourse_anaph: [
+      ["turn(tartaruga,dirs,guardare,3,1,4-6)"],
+      ["turn(tartaruga, dirs, guardare, 3, 1, 4-6)"]
+    ],
+    generated_text: [
+      "la tartaruga chiede con aria perplessa : quale gara è ? [[slnc 600]]"
+    ],
+    tts: ["3.mp3"]
+  },
+  {
+    id: "4",
+    texts: ['"Correre una gara a chi arriva prima", rispose la lepre.'],
+    youtube: ["Kqg_Gcx11OQ"],
+    images: ["4.png"],
+    glosses: [
+      "gls('4',[],[],[],[],[],['gara correre arrivare primo chi'],[],[l])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [4, 1, 5],
+        prolog:
+          "seml(4,1,5-7,[dirs,pres,ind,dire,[lepre,vcomp-[correre,attivita,[gara,qcomp-[arrivare,stativo,statement,[chi,xcomp-[primo]]]]]]])"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [4, 1],
+        prolog:
+          "seml(4,1,5-7,[dirs,pres,ind,dire,[[def,_,_,lepre],[correre,attivita,[[def,_,_,gara],[quest,pres,ind,arrivare,[[top,_,sing,chi],[pred,primo]]]]]]])"
+      }
+    ],
+    discourse_anaph: [
+      ["turn(lepre,dirs,dire,4,1,5-7)"],
+      ["turn(lepre, dirs, dire, 4, 1, 5-7)"]
+    ],
+    generated_text: [
+      'la lepre replica : " correre la gara a chi arriva prima [[slnc 600]]'
+    ],
+    tts: ["4.mp3"]
+  },
+  {
+    id: "5",
+    texts: ['La tartaruga rispose: "Va bene, accetto la gara".'],
+    youtube: ["1hA_IzYDTlA"],
+    images: ["5.png"],
+    glosses: [
+      "gls('5',[],[],[],[],[],['tartaruga : va-bene , ix-1 gara accettare'],[t],[t])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [5, 1, 6],
+        prolog:
+          "seml(5,1,6-8,ipotas([dirs,pres,ind,dire,[tartaruga,interj-[va-bene]]],[dirs,pres,ind,accettare,[little_pro,gara]]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [5, 1],
+        prolog:
+          "seml(5,1,6-8,ipotas([dirs,pres,ind,dire,[[def,_,_,tartaruga],[interj,[va-bene]]]],[dirs,pres,ind,accettare,[[top,_,_,pro],[def,_,_,gara]]]))"
+      }
+    ],
+    discourse_anaph: [
+      ["turn(tartaruga,dirs,dire,5,1,6-8)", "turn(pro,dirs,accettare,5,1,6-8)"],
+      [
+        "turn(tartaruga, dirs, accettare, 5, 1, 6-8)",
+        "turn(tartaruga, dirs, dire, 5, 1, 6-8)"
+      ]
+    ],
+    generated_text: [
+      'la tartaruga dice : " va bene ! [[slnc 600]] accetto la gara [[slnc 600]]'
+    ],
+    tts: ["5.mp3"]
+  },
+  {
+    id: "6",
+    texts: ["Che giro faremo?"],
+    youtube: ["wKQrIZJj9lw"],
+    images: ["6.png"],
+    glosses: ["gls('6',[],[],[wh],[],[],['fare-giro come'],[],[t])"],
+    syntax_lexicon: [
+      {
+        ref: [6, 1, 7],
+        prolog: "seml(6,1,7-10,[quest,fut,ind,fare,[little_pro,giro-[come]]])"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [6, 1],
+        prolog:
+          "seml(6,1,7-10,[quest,fut,ind,fare,[[top,_,_,pro],[def0,quale,sing,giro]]])"
+      }
+    ],
+    discourse_anaph: [
+      ["turn(pro,quest,fare,6,1,7-10)"],
+      ["turn(tartaruga, quest, fare, 6, 1, 7-10)"]
+    ],
+    generated_text: ["quale giro faremo ? [[slnc 600]]"],
+    tts: ["6.mp3"]
+  },
+  {
+    id: "7",
+    texts: [
+      'La lepre rispose: "Per partire, vedi quell’albero caduto? Partiremo da lì"',
+      '"Poi cominciamo a correre e facciamo il giro del grosso albero in fondo."',
+      "Poi continuiamo a correre fino alla vecchia casa abbandonata e quindi arriveremo qua."
+    ],
+    youtube: ["4k_yWlUp03E", "wy4Y1IfUpZQ", "1LM67UknrO0"],
+    images: ["7.1.png", "7.2.1.png", "7.2.2.png"],
+    glosses: [
+      "gls('7.1',[],[],[topic],[loc3_nprox,loc3_nprox,loc3_nprox],[], ['lepre : partire , guardare ix-loc3_prox albero-caduto_cl , ix-loc3_prox partire ix-loc3_prox'],[],[l])",
+      "gls('7.2.1',[],[],[],[loc4_dist,loc4_dist],[],['poi cominciare correre_l iniziare-giro ix-loc4_dist albero grosso ix-loc4_dist'],[],[l])",
+      "gls('7.2.2',[],[],[],[loc5_dist,loc5_dist,loc5_dist,loc5_dist],[],['poi continuare-giro ix-loc5_dist casa ix-loc5_dist vecchio abbandonato ix-loc5_dist , poi finire-giro ix-loc3_prox'],[],[l])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [7, 1, 8],
+        prolog:
+          "seml(7,1,8-11,ipotas([dirs,pres,ind,dire,[lepre,vcomp-[per,partire,achievement,[]],fcomp-[guardare,attivita,perloc,[little_pro,albero, (mod)-[caduto]]]]],[act,fut,ind,partire,[little_pro,avv-[ix-loc3_prox]]]))"
+      },
+      {
+        ref: [7, 2, 9],
+        prolog:
+          "seml(7,2,9-13,coord(e,subord(poi,act,pres,imperat,cominciare,[little_pro,vcomp-[a,correre,attivita,[]]]),[act,pres,ind,fare,[little_pro,giro,obl-[di,albero, (mod)-[grosso],avv-[ix-loc4_dist]]]]))"
+      },
+      {
+        ref: [7, 3, 10],
+        prolog:
+          "seml(7,3,10-15,ipotas(subord(poi,act,pres,ind,continuare,[little_pro,vcomp-[a,correre,attivita,obl-[fino_a,casa,mods-[ (mod)-[vecchio], (mod)-[abbandonato]]]]]),subord(quindi,act,pres,ind,finire,[little_pro,giro,avv-[ix-loc3_prox]])))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [7, 1],
+        prolog:
+          "seml(7,1,8-11,ipotas([dirs,pres,ind,dire,[[def,_,_,lepre],[per,partire,achievement,[]],[act,pres,imperat,guardare,[[top,_,_,pro],[ndef,_,_,albero],[prop,caduto]]]]],[act,fut,ind,partire,[[top,_,_,pro],adj(qua)]]))"
+      },
+      {
+        ref: [7, 2],
+        prolog:
+          "seml(7,2,9-13,coord(e,subord(poi,[act,pres,imperat,cominciare,[[top,_,_,pro],[a,correre,attivita,[]]]]),[act,pres,ind,fare,[[top,_,_,pro],[def,_,_,giro]]]))"
+      },
+      {
+        ref: [7, 3],
+        prolog:
+          "seml(7,3,10-15,ipotas(subord(poi,[act,pres,ind,continuare,[[top,_,_,pro],[a,correre,attivita,[[def,_,_,casa-[prop,vecchio,prop,abbandonato],fino_a]]]]]),subord(quindi,[act,pres,ind,finire,[[top,_,_,pro],[def,_,_,giro],adj(qua)]])))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,dirs,dire,7,1,8-11)",
+        "turn(pro,act,partire,7,1,8-11)",
+        "turn(pro,act,cominciare,7,2,9-13)",
+        "turn(pro,act,fare,7,2,9-13)",
+        "turn(pro,act,continuare,7,3,10-15)",
+        "turn(pro,act,finire,7,3,10-15)"
+      ],
+      [
+        "turn(lepre, act, finire, 7, 3, 10-15)",
+        "turn(lepre, act, continuare, 7, 3, 10-15)",
+        "turn(lepre, act, fare, 7, 2, 9-13)",
+        "turn(lepre, act, cominciare, 7, 2, 9-13)",
+        "turn(lepre, act, partire, 7, 1, 8-11)",
+        "turn(lepre, dirs, dire, 7, 1, 8-11)"
+      ]
+    ],
+    generated_text: [
+      'la lepre risponde : " per partire [[pbas 20.800; volm +5.0]] guarda [[volm -5.0]] un albero caduto partiremo qua [[slnc 600]]',
+      "poi [[pbas 20.800; volm +5.0]] cominciamo [[volm -5.0]] a correre e fa il giro [[slnc 600]]",
+      "poi continua a correre fino alla vecchia casa abbandonata [[slnc 600]] quindi finisce il giro qua [[slnc 600]]"
+    ],
+    tts: ["7.1.mp3", "7.2.1.mp3", "7.2.2.mp3"]
+  },
+  {
+    id: "8",
+    texts: ['La tartaruga rispose: "Va bene. La gara è adesso?"'],
+    youtube: ["rTVBCxm4MdQ"],
+    images: ["8.png"],
+    glosses: [
+      "gls('8',[],[],['y/n'],[],[],['tartaruga : va-bene , gara adesso'],[],[t])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [8, 1, 11],
+        prolog:
+          "seml(8,1,11-17,ipotas([dirs,pres,ind,dire,[tartaruga,interj-[va-bene]]],[quest,pres,ind,essere,[gara,avv-[adesso]]]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [8, 1],
+        prolog:
+          "seml(8,1,11-17,ipotas([dirs,pres,ind,dire,[[def,_,_,tartaruga],[interj,[va-bene]]]],[quest,pres,ind,essere,[[def,_,_,gara],adj(adesso)]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(tartaruga,dirs,dire,10,1,13-20)",
+        "turn(tartaruga,quest,dire,10,2,14-21)"
+      ],
+      [
+        "turn(tartaruga, quest, dire, 10, 2, 14-21)",
+        "turn(tartaruga, dirs, dire, 10, 1, 13-20)"
+      ]
+    ],
+    generated_text: [
+      'la tartaruga risponde : " va bene ! [[slnc 600]] la gara è adesso ? [[slnc 600]]'
+    ],
+    tts: ["8.mp3"]
+  },
+  {
+    id: "9",
+    texts: ['No, domani mattina", replicò la lepre.'],
+    youtube: ["e5PgM88eMJ8"],
+    images: ["9.png"],
+    glosses: ["gls('9',[],[],[],[],[],['no++ , domani mattina'],[],[l])"],
+    syntax_lexicon: [
+      {
+        ref: [9, 1, 12],
+        prolog:
+          "seml(9,1,12-19,[dirs,pres,ind,dire,[lepre,interj-[no],avv-[domani],avv-[mattina]]])"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [9, 1],
+        prolog:
+          "seml(9,1,12-19,[dirs,pres,ind,dire,[[def,_,_,lepre],[interj,[no]],adj(domani),adj(mattina)]])"
+      }
+    ],
+    discourse_anaph: [
+      ["turn(lepre,dirs,dire,9,1,12-19)"],
+      ["turn(lepre, dirs, dire, 9, 1, 12-19)"]
+    ],
+    generated_text: [
+      'la lepre risponde : " no ! [[slnc 600]] domani mattina [[slnc 600]]'
+    ],
+    tts: ["9.mp3"]
+  },
+  {
+    id: "10",
+    texts: [
+      '"Sì, sì, va bene", disse la tartaruga.',
+      '"L’appuntamento è qui?", chiese la tartaruga.'
+    ],
+    youtube: ["UTypeU6p-7Y", "9vtYvfQrmxA"],
+    images: ["10.1.png", "10.2.png"],
+    glosses: [
+      "gls('10.1',[],[],[],[],[],['sì , va bene'],[],[t])",
+      "gls('10.2',[],[],['y/n'],[loc3_nprox],[],['appuntamento ix_loc3_prox'],[],[t])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [10, 1, 13],
+        prolog:
+          "seml(10,1,13-20,[dirs,pres,ind,dire,[tartaruga,interj-[[sÏ,sÏ,va-bene]]]])"
+      },
+      {
+        ref: [10, 2, 14],
+        prolog:
+          "seml(10,2,14-21,[quest,pres,ind,dire,[tartaruga,fcomp-[essere,stativo,question,[appuntamento,avv-[qui]]]]])"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [10, 1],
+        prolog:
+          "seml(10,1,13-20,[dirs,pres,ind,dire,[[def,_,_,tartaruga],[interj,[[sÏ,sÏ,va-bene]]]]])"
+      },
+      {
+        ref: [10, 2],
+        prolog:
+          "seml(10,2,14-21,[quest,pres,ind,dire,[[def,_,_,tartaruga],[quest,pres,ind,essere,[[def,_,_,appuntamento],adj(qui)]]]])"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(tartaruga,dirs,dire,10,1,13-20)",
+        "turn(tartaruga,quest,dire,10,2,14-21)"
+      ],
+      [
+        "turn(tartaruga, quest, dire, 10, 2, 14-21)",
+        "turn(tartaruga, dirs, dire, 10, 1, 13-20)"
+      ]
+    ],
+    generated_text: [
+      'la tartaruga risponde : " sì sì va bene ! [[slnc 600]]',
+      "\" qui è l' appuntamento ? [[slnc 600]]"
+    ],
+    tts: ["10.1.mp3", "10.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
+    id: "1",
+    texts: [
+      "In un bosco viveva una lepre, una lepre altezzosa.",
+      "Mentre saltellava con aria superba, improvvisamente vide una tartaruga che camminava tranquilla, lentamente."
+    ],
+    youtube: ["Errat23BYO0", "ESPwiH3de6A"],
+    images: ["1.1.png", "1.2.png"],
+    glosses: [
+      "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
+      "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
+    ],
+    syntax_lexicon: [
+      {
+        ref: [20, 1, 30],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[lepre,tartaruga,avv-[velocemente]]],[act,pass_rem,ind,andarsene,[little_pro]]))"
+      },
+      {
+        ref: [20, 2, 31],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,act,pass_rem,ind,incamminarsi,[tartaruga]))"
+      }
+    ],
+    semantics_morphology: [
+      {
+        ref: [20, 1],
+        prolog:
+          "seml(20,1,30-46,coord(e,[act,pass_rem,ind,superare,[[def,_,_,lepre],[def,_,_,tartaruga],adj(velocemente)]],[act,pass_rem,ind,andarsene,[[top,_,_,pro]]]))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "seml(20,2,31-48,subord(e_anche,[act,pass_rem,ind,incamminarsi,[[def,_,_,tartaruga]]]))"
+      }
+    ],
+    discourse_anaph: [
+      [
+        "turn(lepre,act,superare,20,1,30-46)",
+        "turn(pro,act,andarsene,20,1,30-46)",
+        "turn(tartaruga,act,incamminarsi,20,2,31-48)"
+      ],
+      [
+        "turn(tartaruga, act, incamminarsi, 20, 2, 31-48)",
+        "turn(lepre, act, andarsene, 20, 1, 30-46)",
+        "turn(lepre, act, superare, 20, 1, 30-46)"
+      ]
+    ],
+    generated_text: [
+      "la lepre superò la tartaruga velocemente e se ne andò [[slnc 600]]",
+      "e anche la tartaruga si incamminò [[slnc 600]]"
+    ],
+    tts: ["20.1.mp3", "20.2.mp3"]
+  },
+  {
     id: "19",
     texts: [
       'Chi arriva ora? Un gufo. "Siete pronte? Cominciamo! 3, 2, 1 ... Via"!'
