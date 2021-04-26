@@ -24,7 +24,7 @@ const HowTo = () => {
             with peripheral rules for exceptions. The generation is organized
             around the following steps:
           </p>
-          <ul>
+          <ol>
             <li>
               a subdivision at utterance level between simple sentence and
               complex sentence
@@ -317,7 +317,7 @@ const HowTo = () => {
               Complement/Adjunct section of the generator in order to select or
               restrict the appropriate word form.
             </li>
-          </ul>
+          </ol>
 
           <p />
         </Col>
