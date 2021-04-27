@@ -16,8 +16,8 @@ import data from "./data";
 class DiscourseUnitNav extends React.Component {
   render() {
     console.log(this.props.du_id);
-    let prevId = this.props.du_id === "19" ? 19 : this.props.du_id * 1 - 1;
-    let prevDisable = this.props.du_id === "19";
+    let prevId = this.props.du_id === "1" ? 1 : this.props.du_id * 1 - 1;
+    let prevDisable = this.props.du_id === "1";
     let nextId = this.props.du_id === "30" ? 30 : this.props.du_id * 1 + 1;
     console.log(nextId);
     let nextDisable = this.props.du_id === "30";

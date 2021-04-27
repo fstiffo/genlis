@@ -16,7 +16,7 @@ import "./App.css";
 
 const expItems = () => {
   let items = [];
-  for (let i = 19; i < 31; i++) {
+  for (let i = 1; i < 31; i++) {
     items.push(
       <NavDropdown.Item key={i} href={"/experiment/" + i}>
         {"Discourse Unit " + i}
