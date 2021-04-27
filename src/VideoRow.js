@@ -7,6 +7,7 @@ class VideoCol extends React.Component {
   render() {
     return (
       <Col>
+        <hr />
         <h4>{this.props.text}</h4>
         <ReactPlayer
           url={"https://www.youtube.com/watch?v=" + this.props.youtube}
@@ -19,7 +20,7 @@ class VideoCol extends React.Component {
 class VideoRow extends React.Component {
   render() {
     let keys = Array.from(this.props.texts.keys());
-    let cols = keys.map(key => (
+    let cols = keys.map((key) => (
       <VideoCol
         key={key}
         text={this.props.texts[key]}
