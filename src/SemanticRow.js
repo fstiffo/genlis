@@ -19,10 +19,10 @@ class SemanticCol extends React.Component {
 
 class SemanticRow extends React.Component {
   render() {
-    let cols = this.props.syntax_lexicon.map(e => (
+    let cols = this.props.syntax_lexicon.map((e) => (
       <SemanticCol
-        key={e.ref.join("|")}
-        reference={e.ref.join("|")}
+        key={e.ref.join(", ")}
+        reference={e.ref.join(", ")}
         prolog={e.prolog}
       />
     ));

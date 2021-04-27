@@ -19,10 +19,10 @@ class LogicCol extends React.Component {
 
 class LogicRow extends React.Component {
   render() {
-    let cols = this.props.semantic_morphology.map(e => (
+    let cols = this.props.semantic_morphology.map((e) => (
       <LogicCol
-        key={e.ref.join("|")}
-        reference={e.ref.join("|")}
+        key={e.ref.join(", ")}
+        reference={e.ref.join(", ")}
         prolog={e.prolog}
       />
     ));
