@@ -13,6 +13,12 @@
   padding-left: 5px;
 }
 
+.syntactical { /* Syntactical and Lexical Forms*/
+  border-left-color: #c9f140;
+  border-left-style: solid;
+  border-left-width: 8px;
+  padding-left: 5px;
+}
 .semantic {
   border-left-color: #92ff3f;
   border-left-style: solid;

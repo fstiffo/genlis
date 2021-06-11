@@ -57,9 +57,9 @@ const App = () => (
         </Container>
         <Container className="p-3 footer">
           <div className="dropdown-divider" />
-          <p class="small">
+          <p className="small">
             Our grateful thanks to{" "}
-            <a href="https://www.babacova.com/" class="text-info">
+            <a href="https://www.babacova.com/" className="text-info">
               ALBA cooperativa sociale onlus
             </a>{" "}
             &nbsp;
@@ -68,7 +68,7 @@ const App = () => (
               variant="outline-info"
               size="sm"
             >
-              <i class="fab fa-facebook" />
+              <i className="fab fa-facebook" />
             </Button>
             &nbsp; for the permission to utilize its videos.
           </p>

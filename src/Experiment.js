@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import VideoRow from "./VideoRow";
 import GlossRow from "./GlossRow";
+import SyntacticalRow from "./SyntacticalRow";
 import SemanticRow from "./SemanticRow";
 import LogicalRow from "./LogicalRow";
 import GenerationRow from "./GenerationRow";
@@ -54,13 +55,15 @@ class ChevronDown extends React.Component {
 class DiscourseUnit extends React.Component {
   render() {
     let id = this.props.id;
-    let du = data.find(e => e.id === id);
+    let du = data.find((e) => e.id === id);
     return (
       <div className="du">
         <h3>Discourse Unit {id}</h3>
         <VideoRow texts={du.texts} youtube={du.youtube} />
         <ChevronDown />
         <GlossRow images={du.images} glosses={du.glosses} />
+        <ChevronDown />
+        <SyntacticalRow syntactical={du.syntactical} />
         <ChevronDown />
         <SemanticRow syntax_lexicon={du.syntax_lexicon} />
         <ChevronDown />

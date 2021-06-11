@@ -11,6 +11,18 @@ const data = [
       "gls('1.1',[],[],[wh],[loc1_nprox,loc1_nprox],[],['bosco , ix-loc1_nprox vivere chi . lepre , lepre altezzoso'],	[],[])",
       "gls('1.2',[altezzoso],[],[],[loc2_nprox,loc2_nprox,loc2_nprox],[],['saltare_l , cominciare occhi_cl_veloce_vs_loc2_nprox , vedere ix-loc2_nprox camminare_t , tartaruga tranquillo camminare_t-lentamente'],[l,t,t,t],[])"
     ],
+    syntactical: [
+      {
+        ref: [1, 1],
+        prolog:
+          "syntlex(1,1,prop(nil,vivere,attivita,present,[lepre, lepre-[mod-[altezzoso]], obl-[luogo,bosco]]))"
+      },
+      {
+        ref: [1, 2],
+        prolog:
+          "syntlex(1,2,coord(mentre,prop(nil,saltare, attivita,statement, [little_pro]), prop(nil,vedere,achievement,statement,[little_pro, avv-[improvvisamente], [tartaruga-[mod-tranquillo], fcomp-[camminare,attivita,statement,[little_pro, avv-[lentamente]]]]])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [1, 1, 1],
@@ -63,6 +75,13 @@ const data = [
     glosses: [
       "gls('2',[altezzoso],[],[],[loc2_nprox,loc2_nprox,loc2_nprox],[guardare],['lepre , saltare_l vicino ix-3t . cominciare chiedere : noi-2 gara può'],[l,l],[l])"
     ],
+    syntactical: [
+      {
+        ref: [2, 1],
+        prolog:
+          "syntlex(2,1,coord(e,prop(nil,avvicinarsi, accompl, statement,[lepre, avv-[saltare]]), prop(nil,chiedere, achievement,dirspeech,[little_pro,obl-[con,tono-[mod-[sprezzante]]], qcomp-[potere,modal,question,[noi-2,vcomp-[fare,accompl,[gara]]]]])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [2, 1, 3],
@@ -100,6 +119,13 @@ const data = [
     glosses: [
       "gls('3',[perplesso],[],[wh],[loc7_prox],[guardare],['tartaruga : gara cosa'], [t],[t])"
     ],
+    syntactical: [
+      {
+        ref: [3, 1],
+        prolog:
+          "syntlex(3,1,prop(nil,guardare, achievement,dirspeech,[tartaruga,avv-[perplesso],qcomp-[essere,stativo,question,[gara-[cosa]]]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [3, 1, 4],
@@ -131,6 +157,13 @@ const data = [
     glosses: [
       "gls('4',[],[],[],[],[],['gara correre arrivare primo chi'],[],[l])"
     ],
+    syntactical: [
+      {
+        ref: [4, 1],
+        prolog:
+          "syntlex(4,1,prop(nil,dire, achievement,dirspeech,[lepre,vcomp-[correre,attivita,[gara, qcomp-[arrivare, stativo,statement,[chi, xcomp-[primo]]]]]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [4, 1, 5],
@@ -161,6 +194,13 @@ const data = [
     images: ["5.png"],
     glosses: [
       "gls('5',[],[],[],[],[],['tartaruga : va-bene , ix-1 gara accettare'],[t],[t])"
+    ],
+    syntactical: [
+      {
+        ref: [5, 1],
+        prolog:
+          "syntlex(5,1,ipotas(prop(nil,dire, achievement,dirspeech,[tartaruga,interj-[va-bene]]), prop(nil,accettare, achievement,dirspeech,[little_pro,gara])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -194,6 +234,13 @@ const data = [
     youtube: ["wKQrIZJj9lw"],
     images: ["6.png"],
     glosses: ["gls('6',[],[],[wh],[],[],['fare-giro come'],[],[t])"],
+    syntactical: [
+      {
+        ref: [6, 1],
+        prolog:
+          "syntlex(6,1,prop(nil,fare,accompl,question,[little_pro,giro-[come]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [6, 1, 7],
@@ -227,6 +274,23 @@ const data = [
       "gls('7.1',[],[],[topic],[loc3_nprox,loc3_nprox,loc3_nprox],[], ['lepre : partire , guardare ix-loc3_prox albero-caduto_cl , ix-loc3_prox partire ix-loc3_prox'],[],[l])",
       "gls('7.2.1',[],[],[],[loc4_dist,loc4_dist],[],['poi cominciare correre_l iniziare-giro ix-loc4_dist albero grosso ix-loc4_dist'],[],[l])",
       "gls('7.2.2',[],[],[],[loc5_dist,loc5_dist,loc5_dist,loc5_dist],[],['poi continuare-giro ix-loc5_dist casa ix-loc5_dist vecchio abbandonato ix-loc5_dist , poi finire-giro ix-loc3_prox'],[],[l])"
+    ],
+    syntactical: [
+      {
+        ref: [7, 1],
+        prolog:
+          "syntlex(7,1,ipotas(prop(nil,dire, achievement,dirspeech,[lepre, vcomp-[per,partire, achievement, []], fcomp-[guardare, attivita,perloc,[little_pro,albero,mod-[caduto]]]]), prop(nil,partire, achievement, illocut,[little_pro,avv-[ix-loc3_prox]])))"
+      },
+      {
+        ref: [7, 2],
+        prolog:
+          "syntlex(7,2,coord(e,prop(poi,cominciare,process,perloc,[little_pro,vcomp-[a,correre,attivita,[]]]), prop(nil,fare,accompl,statement,[little_pro,giro,obl-[di, albero,mod-[grosso],avv-[ix-loc4_dist]]])))"
+      },
+      {
+        ref: [7, 3],
+        prolog:
+          "syntlex(7,3,ipotas(prop(poi,continuare,process,statement,[ little_pro,vcomp-[a,correre,attivita,obl-[fino_a,casa, mods-[mod-[vecchio],mod-[abbandonato]]]]]), prop(quindi,finire,process, statement,[little_pro,giro,avv-[ix-loc3_prox]])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -295,6 +359,13 @@ const data = [
     glosses: [
       "gls('8',[],[],['y/n'],[],[],['tartaruga : va-bene , gara adesso'],[],[t])"
     ],
+    syntactical: [
+      {
+        ref: [8, 1],
+        prolog:
+          "syntlex(8,1,ipotas(prop(nil,dire, achievement, dirspeech,[tartaruga,interj-[va-bene]]), fcomp-[essere,stativo,question,[gara,avv-[adesso]]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [8, 1, 11],
@@ -330,6 +401,13 @@ const data = [
     youtube: ["e5PgM88eMJ8"],
     images: ["9.png"],
     glosses: ["gls('9',[],[],[],[],[],['no++ , domani mattina'],[],[l])"],
+    syntactical: [
+      {
+        ref: [9, 1],
+        prolog:
+          "syntlex(9,1,prop(nil,dire, achievement, dirspeech,[lepre,interj-[no], avv-[domani], avv-[mattina]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [9, 1, 12],
@@ -364,6 +442,18 @@ const data = [
     glosses: [
       "gls('10.1',[],[],[],[],[],['sì , va bene'],[],[t])",
       "gls('10.2',[],[],['y/n'],[loc3_nprox],[],['appuntamento ix_loc3_prox'],[],[t])"
+    ],
+    syntactical: [
+      {
+        ref: [10, 1],
+        prolog:
+          "syntlex(10,1,prop(nil,dire, achievement, dirspeech,[tartaruga,interj-[[sì,sì,va-bene]]]))"
+      },
+      {
+        ref: [10, 2],
+        prolog:
+          "syntlex(10,2,prop(nil,essere,stativo,question,[appuntamento,avv-[qui]]))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -413,6 +503,13 @@ const data = [
     glosses: [
       "gls('11',[],[],[],[loc3_nprox],[],['sì++ , ix-loc3_nprox'],[],[l])"
     ],
+    syntactical: [
+      {
+        ref: [11, 1],
+        prolog:
+          "syntlex(11,1,prop(nil,dire, achievement, dirspeech,[lepre,interj-[[sì,sì]],avv-[qui]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [11, 1, 15],
@@ -442,6 +539,13 @@ const data = [
     youtube: ["QFAAmD-8ZRg"],
     images: ["12.png"],
     glosses: ["gls('12',[],[],[],[],[],['bene , grazie'],[],[t])"],
+    syntactical: [
+      {
+        ref: [12, 1],
+        prolog:
+          "syntlex(12,1,prop(nil,dire, achievement, dirspeech,[tartaruga,interj-[[va-bene,grazie]]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [12, 1, 16],
@@ -472,6 +576,13 @@ const data = [
     images: ["13.png"],
     glosses: [
       "gls('13',[],[],[],[],[],['tartaruga referente-va-dx_cl , lepre zampettare_cl referente-va-sx_cl'],[],[])"
+    ],
+    syntactical: [
+      {
+        ref: [13, 1],
+        prolog:
+          "syntlex(13,1,coord(e,prop(nil,andarsene,achievement,statement,[tartaruga, avv-[dx_cl]]), prop(nil,andarsene,achievement,statement,[lepre,avv-[zampettare],avv-[sx_cl]])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -512,6 +623,13 @@ const data = [
     glosses: [
       "gls('14',[],[],[],[loc6_nprox],[],['animale bosco tutti vedere , sapere domani mattina presto accorrere_cl vedere+ aspettare accorrere_cl'],[],[])"
     ],
+    syntactical: [
+      {
+        ref: [14, 1],
+        prolog:
+          "syntlex(14,1,prop(nil,sapere,stativo,statement,[animale-[tutti,spec-[bosco],fcomp-[vedere, attivita, statement,[little_pro]]],fcomp-[accorrere, achievement,statement, [little_pro,avv-[domani], avv-[mattina],avv-[presto]]], vcomp-[per,aspettare,attivita,[avv-[entusiasta]]],vcomp-[per,vedere,achievement,[gara,avv-[entusiasta]]]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [14, 1, 18],
@@ -546,6 +664,18 @@ const data = [
     glosses: [
       "gls('15.1',[],[],[],[],[],['lepre primo venire'],[],[])",
       "gls('15.2',[altezzoso],[],[retorica,retorica],[loc2_nprox],[],['saltare_l . tartaruga non c\\'è . ix-3t paura rinunciare'],[l],[l])"
+    ],
+    syntactical: [
+      {
+        ref: [15, 1],
+        prolog:
+          "syntlex(15,1,prop(nil,venire, achievement, statement,[lepre,xadj-[per,primo]]))"
+      },
+      {
+        ref: [15, 2],
+        prolog:
+          "syntlex(15,2,coords(coord(e,adj(nil,saltellare,attivita,statement,[little_pro]),prop(nil,dire, achievement, dirspeech, [little_pro,avv-[sprezzante]]), prop(neg,essere,stativo,question,[tartaruga,avv-[qui]])), coord(e,prop(nil,avere,stativo, statement,[little_pro,[paura]]), prop(nil,rinunciare, achievement, question,[little_pro,[]]))))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -600,6 +730,23 @@ const data = [
     glosses: [
       "gls('16.1',[],[],[],[],[],['poi piano-piano tartaruga venire'],[],[])",
       "gls('16.2',[],[],['y/n'],[],[],['camminare_t . ix-1 paura rinunciare . no+ , ix-1 gara partecipare ix-1b'],[t],[])"
+    ],
+    syntactical: [
+      {
+        ref: [16, 1],
+        prolog:
+          "syntlex(16,1,prop(poi,venire,achievement,statement,[tartaruga, avv-[piano_piano]]))"
+      },
+      {
+        ref: [16, 2],
+        prolog:
+          "syntlex(16,2,prop(nil,dire, achievement, dirspeech, [little_pro,adj(camminare),qcomp-[rinunciare, achievement, question,[little_pro,obl-[per,paura]]]]))"
+      },
+      {
+        ref: [16, 3],
+        prolog:
+          "syntlex(16,3,ipotas(prop(nil,dire, achievement, dirspeech,[little_pro,interj-[no]]),prop(nil,dire, achievement, dirspeech,[ix-1,fcomp-[partecipare,attivita,statement,[ix-1,obl-[a,gara],avv-[ix-'B_1']]]])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -661,6 +808,13 @@ const data = [
     youtube: ["HRXOnKLmQN4"],
     images: ["17.png"],
     glosses: ["gls('17',[],[],[],[],[],['va-bene'],[],[l])"],
+    syntactical: [
+      {
+        ref: [17, 1],
+        prolog:
+          "syntlex(17,1,prop(nil,dire, achievement, dirspeech,[lepre,interj-[va-bene]]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [17, 1, 24],
@@ -694,6 +848,23 @@ const data = [
       "gls('18.1',[],[],[],[],[],['referente1+referente2-si-affiancano_cl'],[],[])",
       "gls('18.2',[],[],[],[loc2_nprox,loc2_nprox],[sbuffare-guardare,sbuffare-guardare],['referente1_cl ix-3l lepre , zampel_cl , orecchie_l-vs-dietro , zampel_cl'],[l],[])",
       "gls('18.3',[],[],[],[loc7_prox],[prepararsi_alla_partenza],['tartaruga tranquillo guardare-vs-loc7_prox guardare-avanti zampet_cl'],[t],[])"
+    ],
+    syntactical: [
+      {
+        ref: [18, 1],
+        prolog:
+          "syntlex(18,1,prop(nil,affiancarsi, achievement, statement,[referenti_2]))"
+      },
+      {
+        ref: [18, 2],
+        prolog:
+          "syntlex(18,2,ipotas(prop(nil,stare,attivita,statement,[lepre, [avv-[ix-l_3],avv-[zampettare]]]),prop(nil,sbuffare,attivita,statement,[little_pro,avv-[tanto],orecchie-[mod-[verso,dietro]],vcomp-[guardare,attivita,[tartaruga]]])))"
+      },
+      {
+        ref: [18, 3],
+        prolog:
+          "syntlex(18,3,prop(nil,guardare,attivita,statement,[tartaruga, avv-[a_sinistra], xadj-[tranquillo],lepre, vcomp-[zampettare,attivita,[]]]))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -759,6 +930,18 @@ const data = [
     glosses: [
       "gls('19',[],[],[wh,'y/n',foc],[],[],['venire chi . gufo . voi-due pronto . cominciare . 3,2,1 . via'],[],[g])."
     ],
+    syntactical: [
+      {
+        ref: [19, 1],
+        prolog:
+          "syntlex(19,1,coord(e,prop(nil,arrivare, stativo, present,[gufo, avv-[ora]]),prop(nil,dire,achievement,dirspeech,[little_pro,qcomp-[essere,stativo,question,[voi-[due],xcomp-[pronto]]]])))"
+      },
+      {
+        ref: [19, 2],
+        prolog:
+          "syntlex(19,2,ipotas(prop(nil,cominciare, process, perloc,[little_pro-[plur]]), prop(nil,dire,achievement,dirspeech,[little_pro,interj-['3 2 1 ... via']])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [19, 1, 28],
@@ -814,6 +997,18 @@ const data = [
       "gls('20.1',[],[],[],[],[],['lepre referente1+referente2-fermi_cl referente1-supera_velocemente-reference2_cl andarsene'],[],[])",
       "gls('20.2',[],[],[],[],[],['tartaruga , uguale , camminare_t'],[t],[])"
     ],
+    syntactical: [
+      {
+        ref: [20, 1],
+        prolog:
+          "syntlex(20,1,coord(e,prop(nil,superare, achievement, statement,[lepre,tartaruga,avv-[velocemente]]), prop(nil,andarsene, achievement, statement,[little_pro])))"
+      },
+      {
+        ref: [20, 2],
+        prolog:
+          "syntlex(20,2,prop(e_anche,incamminarsi,achievement,statement,[tartaruga]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [20, 1, 30],
@@ -867,6 +1062,18 @@ const data = [
     glosses: [
       "gls('21.1',[],[veloce],[],[],[],['lepre referente-corre_cl , correre_l , orecchie_l-in-movimento , correre_l'],[l],[]).",
       "gls('21.2',[aria_di_sufficienza],[],[],[],[],['guardare-indietro : tartaruga in-fondo ( dietro ) , PU1'],[],[l])."
+    ],
+    syntactical: [
+      {
+        ref: [21, 1],
+        prolog:
+          "syntlex(21,1,coord(e,prop(nil, correre,attivita,statement,[lepre]), prop(nil, correre,attivita,statement,[little_pro,avv-[velocemente]]),prop(nil,vibrare,attivita,statement,[orecchie])))"
+      },
+      {
+        ref: [21, 2],
+        prolog:
+          "syntlex(21,2,coord(e,prop(nil,guardare_indietro, achievement, statement,[lepre]),prop(nil,dire, achievement, statement,[little_pro,avv-[sprezzante],fcomp-[essere,stativo,statement,[tartaruga,avv-[dietro],avv-[in_fondo]]]])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -924,6 +1131,18 @@ const data = [
     glosses: [
       "gls('22',[],[veloce],[],[loc8_nprox,loc8_nprox],[],['correre_l,albero grosso ( albero grosso_cl sorpassare_cl ) correre_l , referente-in-movimento_cl arrivare casa vecchio abbandonato ix-loc8_nprox . ( casa_cl referente-in-movimento_cl )'],[l,l],[])."
     ],
+    syntactical: [
+      {
+        ref: [22, 1],
+        prolog:
+          "syntlex(22,1,ipotas(prop(poi,correre,attivita,statement,[little_pro, obl-[fino_a,albero,mod-[grosso]]]),prop(nil,sorpassare, achievement, statement,[little_pro, [albero,mod-[grosso]]])))"
+      },
+      {
+        ref: [22, 2],
+        prolog:
+          "syntlex(22,2,coord(e,prop(nil,correre,attivita,statement,[little_pro]),prop(nil,arrivare, achievement, statement,[little_pro,obl-[a,casa,mods-[mod-[vecchio],mod-[abbandonato]]]])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [22, 1, 34],
@@ -978,6 +1197,23 @@ const data = [
     glosses: [
       "gls('23.1',[],[],[],[],[],['saltare_l . PU2 , tartaruga lontano , ix-1 cominciare addormentarsi un-po\\' , PU2'],[l],[l]).",
       "gls('23.2',[],[],[],[],[],['correre_l , ( casa_cl casa-dietro-andare_cl ) , dormire-addormentarsi . orecchie_l-abbassarsi , dormire'],[l,l],[])."
+    ],
+    syntactical: [
+      {
+        ref: [23, 1],
+        prolog:
+          "syntlex(23,1,coord(e,adj(nil,saltellare,attivita,statement,[little_pro]),prop(nil,dire, achievement, dirspeech,[little_pro,fcomp-[essere,stativo,statement,[tartaruga,avv-[lontano]]]]), prop(nil,cominciare, process, statement,[io,vcomp-[a,dormire,achievement,[avv-[un_pò],interj-['PU']]]])))"
+      },
+      {
+        ref: [23, 2],
+        prolog:
+          "syntlex(23,2,coord(e,prop(nil,andare, achievement, statement,[little_pro,avv-[di_corsa],obl-[dietro,casa]]),prop(nil, abbassare, achievement, statement,[little_pro, orecchie,vcomp-[per,dormire,attivita,[]]])))"
+      },
+      {
+        ref: [23, 3],
+        prolog:
+          "syntlex(23,3,prop(e,addormentarsi,achievement,statement,[little_pro]))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -1049,6 +1285,18 @@ const data = [
       "gls('24.1',[],[],[],[],[],['tartaruga tranquillo camminare_t'],[t],[]).",
       "gls('24.2',[],[],[],[],[],['albero grosso camminare_t , ( albero_cl referente-in-movimento-vicino-albero_cl ) , camminare_t , ( albero_cl referente-albero-superare_cl ) , ( referente-albero-superato_cl )'],[t,t],[])."
     ],
+    syntactical: [
+      {
+        ref: [24, 1],
+        prolog:
+          "syntlex(24,1,prop(nil,camminare,attivita,statement,[tartaruga,xadj-[tranquillo]]))"
+      },
+      {
+        ref: [24, 2],
+        prolog:
+          "syntlex(24,2,coord(e,prop(nil,avvicinarsi,attivita,statement,[little_pro,avv-[camminare],obl-[a,albero, mod-[grosso]]]), prop(nil,superare, achievement, statement,[little_pro,albero])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [24, 1, 39],
@@ -1101,6 +1349,18 @@ const data = [
     glosses: [
       "gls('25',[],[],['y/n'],[loc8_nprox,loc9_dist,loc9_dist],[],['cominciare casa vecchio abbandonato ix-loc8_nprox camminare_t , vedere lepre dormire ix-loc9_dist , PU3'],[t],[t])."
     ],
+    syntactical: [
+      {
+        ref: [25, 1],
+        prolog:
+          "syntlex(25,1,prop(nil,arrivare,achievement,statement,[little_pro,obl-[accanto_a,casa, mods-[mod-[vecchio], mod-[abbandonato]]]]))"
+      },
+      {
+        ref: [25, 2],
+        prolog:
+          "syntlex(25,2,coord(e,prop(nil,vedere, stativo, statement,[little_pro,lepre,vcomp-[dormire,attivita,[]]]),prop(nil,dire,achievement,dirspeech,[little_pro,interj-['PUU']])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [25, 1, 41],
@@ -1150,6 +1410,13 @@ const data = [
     glosses: [
       "gls('26',[],[],[],[loc3_prox,loc3_prox],[],['camminare_t . ( albero_cl referente-inmovimento-supera-albero_cl ) , arrivare quasi vicino albero_caduto_cl ix-loc3_prox , camminare_t'],[t,t],[])."
     ],
+    syntactical: [
+      {
+        ref: [26, 1],
+        prolog:
+          "syntlex(26,1,coord(e,prop(nil,camminare,attivita,statement,[tartaruga]), prop(nil,arrivare, achievement, statement,[little_pro,avv-[quasi],obl-[vicino_a,albero,mod-[caduto]]])))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [26, 1, 43],
@@ -1192,6 +1459,33 @@ const data = [
       "gls('27.1',[],[],[wh,retorica],[loc8_prox,loc10_ndist],[],['ix-loc8_nprox lepre dormire . svegliarsi , stiracchiarsi . tartaruga dove . ancora ix-loc10_ndist . vedere+'],[l],[l]).",
       "gls('27.2',[],[],[],[loc11_nprox,loc12_dist,loc12_dist,loc13_dist],[],['guardare . non-c\\'è . in-fondo guardare non-c\\'è , guardare-altrove'],[l,l,l],[l,l]).",
       "gls('27.3',[sorpreso],[],[],[],[],['arrivare albero_caduto_cl vicino camminare_t'],[],[l])."
+    ],
+    syntactical: [
+      {
+        ref: [27, 1],
+        prolog:
+          "syntlex(27,1,ipotas(prop(nil,dormire,attivita,statement,[lepre]),coord(e,prop(nil,svegliarsi, achievement, statement,[little_pro]), prop(nil,stiracchiarsi,achievement,statement,[little_pro]))))"
+      },
+      {
+        ref: [27, 2],
+        prolog:
+          "syntlex(27,2,ipotas(prop(nil,dire, achievement,dirspeech,[little_pro,qcomp-[essere,stativo,question,[tartaruga,avv-[dove]]],qcomp-[essere,stativo,question,[little_pro,avv-[ancora],avv-[ix-loc9_ndist]]]]),prop(nil,vedere,achievement,illocut,[little_pro-[plur]])))"
+      },
+      {
+        ref: [27, 3],
+        prolog:
+          "syntlex(27,3,coord(e,prop(nil,guardare,attivita,statement,[little_pro,obl-[di,lato]]),prop(neg,essere,stativo,statement,[little_pro,avv-[in_fondo]])))"
+      },
+      {
+        ref: [27, 4],
+        prolog:
+          "syntlex(27,4,prop(nil,guardare,achievement,statement,[little_pro,avv-[altrove]]))"
+      },
+      {
+        ref: [27, 5],
+        prolog:
+          "syntlex(27,5,ipotas(prop(nil,dire,achievement,dirspeech,[little_pro,interj-['SORPRESA']]),prop(nil,arrivare, achievement, statement,[tartaruga,avv-[quasi],obl-[vicino_a,albero,mod-[caduto]]])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -1288,6 +1582,13 @@ const data = [
     glosses: [
       "gls('28',[],[veloce],[],[],[],['lepre cominciare correre correre_l'],[l],[])."
     ],
+    syntactical: [
+      {
+        ref: [28, 1],
+        prolog:
+          "syntlex(28,1,prop(nil,correre,stativo,statement,[lepre,avv-[ 'OCCHI_SOCCHIUSI_DENTI_VISIBILI']]))"
+      }
+    ],
     syntax_lexicon: [
       {
         ref: [28, 1, 49],
@@ -1318,6 +1619,18 @@ const data = [
     images: ["29.png"],
     glosses: [
       "gls('29',[sopreso],[],[],[loc13_dist],[],['ix-loc13_dist tartaruga guardare-indietro . guscio-alzare_cl , camminare.velocemente_t'],[t],[])."
+    ],
+    syntactical: [
+      {
+        ref: [29, 1],
+        prolog:
+          "syntlex(29,1,coord(e,prop(nil,guardare, attivita, statement,[tartaruga,avv-[indietro]]),prop(nil,esclamare,achievement,exclam,[little_pro,interj-['SORPRESA']])))"
+      },
+      {
+        ref: [29, 2],
+        prolog:
+          "syntlex(29,2,coord(e,prop(nil,alzare, achievement, statement,[little_pro,guscio,avv-['OCCHI_APERTI_LABBRA_STRETTE']]), prop(nil,camminare,achievement,statement,[little_pro,avv-[velocemente]])))"
+      }
     ],
     syntax_lexicon: [
       {
@@ -1374,6 +1687,23 @@ const data = [
     glosses: [
       "gls('30.1',[],[],[],[],[],['referente2_cl referente1_rincorre_referente2_cl , referente1_raggiunge_referente2_cl ) . primo tartaruga . primo ( referente1+referente2-al-traguardo_cl ) . nastro superare . finito'],[t,l,t],[]).",
       "gls('30.2',[con_vergogna],[],[],[],[],['lepre saltare_l arrivare vergogna camminare_l andarsene'],[l,l],[])."
+    ],
+    syntactical: [
+      {
+        ref: [30, 1],
+        prolog:
+          "syntlex(30,1,coord(e,prop(nil,rincorrere,attivita,statement,[referente_1,referente_2]),prop(nil,raggiungere, achievement, statement,[referente_1,referente_2])))"
+      },
+      {
+        ref: [30, 2],
+        prolog:
+          "syntlex(30,2,coord(e,prop(ma,tagliare,achievement,statement,[tartaruga, traguardo,xadj-[per,primo]]), prop(nil,vincere, achievement, statement,[little_pro])))"
+      },
+      {
+        ref: [30, 3],
+        prolog:
+          "syntlex(30,3,coord(e,prop(nil,arrivare, achievement, statement,[lepre,avv-[saltellare]]), prop(nil,andarsene, achievement, statement,[little_pro,obl-[con,vergogna]])))"
+      }
     ],
     syntax_lexicon: [
       {
